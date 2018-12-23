@@ -6,7 +6,7 @@
 /*   By: abao <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 16:22:14 by abao              #+#    #+#             */
-/*   Updated: 2018/12/14 19:24:18 by abao             ###   ########.fr       */
+/*   Updated: 2018/12/18 16:20:39 by abao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -68,5 +68,6 @@ t_flags			print_int(const char *format, va_list args, t_flags list);
 t_flags			print_int_other(const char *format, va_list args, t_flags list);
 t_flags			print_double(const char *format, va_list args, t_flags list);
 t_flags			print_point(const char *format, va_list args, t_flags list);
+t_flags			print_string(const char *format, va_list args, t_flags list);
 
 #endif

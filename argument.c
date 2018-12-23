@@ -6,7 +6,7 @@
 /*   By: abao <marvin@42.fr>                        +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/11 17:03:48 by abao              #+#    #+#             */
-/*   Updated: 2018/12/14 19:24:20 by abao             ###   ########.fr       */
+/*   Updated: 2018/12/18 16:21:24 by abao             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -57,8 +57,10 @@ t_flags		print_arg(const char *format, int x, va_list args, t_flags list)
 {
 	if (list.mod.h == 1)
 		list = print_short(format, x, args, list);
-	else if (list.mod.h2 == 1 || list.arg == 'c' || list.arg == 's')
+	else if (list.mod.h2 == 1 || list.arg == 'c')
 		list = print_char(format, x, args, list);
+	else if (list.arg == 's')
+		list = print_string(format, x, args, list);
 	else if (list.mod.l == 1 || list.mod.l2 == 1)
 		list = print_long(format, x, args, list);
 	else if (pf_strchr(&list.arg, "di") != NULL)
